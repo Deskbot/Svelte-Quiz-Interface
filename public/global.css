@@ -5,7 +5,8 @@ html, body {
 }
 
 body {
-	color: #333;
+	background-color: #333;
+	color: #CCC;
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
@@ -30,6 +31,7 @@ label {
 }
 
 input, button, select, textarea {
+	background-color: #FFFFFF33;
 	font-family: inherit;
 	font-size: inherit;
 	padding: 0.4em;
@@ -48,19 +50,19 @@ input[type="range"] {
 }
 
 button {
-	color: #333;
-	background-color: #f4f4f4;
+	color: #f4f4f4;
+	background-color: #333;
 	outline: none;
 }
 
 button:disabled {
-	color: #999;
+	color: #777;
 }
 
 button:not(:disabled):active {
-	background-color: #ddd;
+	background-color: #222;
 }
 
 button:focus {
-	border-color: #666;
+	border-color: #AAA;
 }
