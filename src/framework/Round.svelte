@@ -8,7 +8,7 @@
 
     let submitted = false;
 
-    let questionsCorrect = arrayOf(questions.length, false); // try new Array fill
+    let questionsCorrect = new Array(questions.length).fill(false);
 
     function mark() {
         submitted = true;
