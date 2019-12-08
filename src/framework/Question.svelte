@@ -1,14 +1,14 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
+    import { equivalent } from "../util/quiz";
 
     export let answer;
     export let correct;
     export let prompt;
     export let reveal;
 
-    let guess;
+    let guess = "";
 
-    $: correct = guess === answer;
+    $: correct = equivalent(guess, answer);
 </script>
 
 <style>
