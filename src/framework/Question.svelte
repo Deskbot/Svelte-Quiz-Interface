@@ -1,12 +1,14 @@
 <script>
-    export let prompt;
+    import { createEventDispatcher } from 'svelte';
+
     export let answer;
+    export let correct;
+    export let prompt;
     export let reveal;
-    export let mark;
 
-    let givenAnswer = "";
+    let guess;
 
-    $: wrong = givenAnswer.trim() !== answer;
+    $: correct = guess === answer;
 </script>
 
 <style>
@@ -15,11 +17,13 @@
     }
 
     .right {
-        color: green;
+        border-color: #0C0;
+        color: #0C0;
     }
 
     .wrong {
-        color: red;
+        border-color: #C00;
+        color: #C00;
         text-decoration: line-through;
     }
 </style>
@@ -27,12 +31,12 @@
 <li>
     <p>{prompt}</p>
     <input
-        class:right={reveal && !wrong}
-        class:wrong={reveal && wrong}
-        bind:value={givenAnswer}
+        class:right={reveal && correct}
+        class:wrong={reveal && !correct}
+        bind:value={guess}
         type="text"
-    >
-    {#if reveal && wrong }
+    />
+    {#if reveal && !correct }
         {answer}
     {/if}
 </li>
