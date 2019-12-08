@@ -5,7 +5,7 @@
     export let name;
     export let questions;
 
-    let submitted = true;
+    let submitted = false;
 </script>
 
 <style>
@@ -16,10 +16,10 @@
     <h2>{name}</h2>
     <ol>
         {#each questions as question}
-            <Question {...question} />
+            <Question {...question} reveal={submitted} />
         {/each}
     </ol>
-    <button on:click={() => submitted = !submitted}>
+    <button on:click={() => submitted = true}>
         Mark
     </button>
 
