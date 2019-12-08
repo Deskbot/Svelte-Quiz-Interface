@@ -1,5 +1,5 @@
 <script>
-    import { equivalent } from "../util/quiz";
+    import { mark } from "../util/quiz";
 
     export let answer;
     export let correct;
@@ -8,7 +8,7 @@
 
     let guess = "";
 
-    $: correct = equivalent(guess, answer);
+    $: correct = mark($$props, guess);
 </script>
 
 <style>

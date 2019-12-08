@@ -23,7 +23,7 @@
 <section>
     <h2>{name}</h2>
     <ol>
-        {#each questions as question, qNum }
+        {#each questions as question, qNum}
             <Question
                 {...question}
                 bind:correct={questionsCorrect[qNum]}

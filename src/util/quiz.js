@@ -1,6 +1,14 @@
-const ignoreChars = /[\s,.:'@~#][}{+=-_)(*&^%$£"!\\|`¬<>\?/']/gi;
+const ignoreChars = /[\s,\.:'@~#\]\[\}\{\+=\-_\)\(\*&\^%\$£"!\\`¬<>\?/\|]/gi;
 
-export function equivalent(left, right) {
+export function mark(question, guess) {
+    guess = normalise(guess);
+
+    if (question.matcher) return question.matcher.test(guess);
+
+    return equivalent(normalise(question.answer), guess);
+}
+
+function equivalent(left, right) {
     return normalise(left) === normalise(right);
 }
 
