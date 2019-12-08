@@ -23,7 +23,6 @@
 
     .wrong {
         border-color: #C00;
-        color: #C00;
         text-decoration: line-through;
     }
 </style>

@@ -1,7 +1,6 @@
 <script>
     import Question from "./Question.svelte";
     import Result from "./Result.svelte";
-    import { arrayOf } from "../util/array";
 
     export let name;
     export let questions;
