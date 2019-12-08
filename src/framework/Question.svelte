@@ -4,14 +4,18 @@
     export let reveal;
     export let mark;
 
-    let givenAnswer;
+    let givenAnswer = "";
 
-    $: wrong = reveal && givenAnswer.trim() !== answer;
+    $: wrong = givenAnswer.trim() !== answer;
 </script>
 
 <style>
     input {
         width: 100%;
+    }
+
+    .right {
+        color: green;
     }
 
     .wrong {
@@ -23,11 +27,12 @@
 <li>
     <p>{prompt}</p>
     <input
-        class:wrong={wrong}
+        class:right={reveal && !wrong}
+        class:wrong={reveal && wrong}
         bind:value={givenAnswer}
         type="text"
     >
-    {#if reveal}
+    {#if reveal && wrong }
         {answer}
     {/if}
 </li>
