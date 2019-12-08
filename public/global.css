@@ -1,5 +1,12 @@
-html, body {
+* {
 	color: #CCC;
+}
+
+*::selection {
+	background: #C0A5FF
+}
+
+html, body {
 	height: 100%;
 	position: relative;
 	width: 100%;
