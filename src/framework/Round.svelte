@@ -15,7 +15,9 @@
 </script>
 
 <style>
-
+    ol {
+        padding: 0 40px;
+    }
 </style>
 
 <section>
