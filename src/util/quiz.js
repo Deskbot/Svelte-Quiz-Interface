@@ -5,11 +5,7 @@ export function mark(question, guess) {
 
     if (question.matcher) return match(question.matcher, guess);
 
-    return equivalent(normalise(question.answer), guess);
-}
-
-function equivalent(left, right) {
-    return normalise(left) === normalise(right);
+    return guess.includes(normalise(question.answer));
 }
 
 function match(matcher, str) {
