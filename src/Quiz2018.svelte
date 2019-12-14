@@ -74,7 +74,7 @@
                     "The Lizard",
                     "Luke Carlyl / The Mad Bomber Group",
                 ],
-                // TODO implement questions out of 2
+                outOf: 2,
             },
             {
                 prompt: "In \"Ben 10: Protector of the Earth\" how many of Ben's aliens are actually playable?",

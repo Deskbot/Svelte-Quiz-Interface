@@ -1,7 +1,9 @@
 <script>
     import { mark } from "../util/quiz";
+    import { range } from "../util/arr";
 
     export let answer;
+    export let outOf = 1;
     export let prompt;
     export let reveal;
     export let score;
@@ -42,14 +44,16 @@
 
 <li>
     <p>{prompt}</p>
-    <input
-        class:correct={reveal && correct}
-        class:half={reveal && score === 0.5}
-        class:wrong={reveal && score === 0}
-        bind:value={guess}
-        type="text"
-    />
-    {#if reveal && !correct}
-        {displayAnswer(answer)}
-    {/if}
+    {#each [...range(0, outOf)] as partNumber}
+        <input
+            class:correct={reveal && correct}
+            class:half={reveal && score === 0.5}
+            class:wrong={reveal && score === 0}
+            bind:value={guess}
+            type="text"
+        />
+        {#if reveal && !correct}
+            {displayAnswer(answer)}
+        {/if}
+    {/each}
 </li>
