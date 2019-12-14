@@ -6,8 +6,9 @@
     export let questions;
 
     let submitted = false;
+    let questionScores = new Array(questions.length).fill(0);
 
-    let questionsCorrect = new Array(questions.length).fill(false);
+    $: questionScores.reduce((tot, score) => tot + score);
 
     function mark() {
         submitted = true;
@@ -26,7 +27,7 @@
         {#each questions as question, qNum}
             <Question
                 {...question}
-                bind:correct={questionsCorrect[qNum]}
+                bind:score={questionScores[qNum]}
                 reveal={submitted}
             />
         {/each}
@@ -39,7 +40,7 @@
 
     {#if submitted}
         <Result
-            points={questionsCorrect.filter(val => val).length}
+            points={questionScores.reduce((tot, score) => tot + score)}
             outOf={questions.length}
         />
     {/if}

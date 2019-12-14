@@ -64,7 +64,7 @@
             {
                 prompt: "In \"Cel Damage\" (and its re-releases under slightly different titles), there are several whacky playable characters including a devil called \"Sinder\", a T-Rex called \"T. Wrecks\", and an eastern European dominatrix. Name that dominatrix!",
                 answer: "Dominique Trix",
-                // TODO implement half for each half of the name
+                half: /dominique|trix/
             },
             {
                 prompt: "In \"Spiderman 3\" for the PS2, PSP, and Wii there are several super villains, however some of these villains did not appear in the movie the game was based on. Name two of those villains! For 2 points.",
@@ -83,7 +83,7 @@
             {
                 prompt: "In \"Tom and Jerry: War of the Whiskers\" if you knock out your opponent without taking any damage, what word appears on the screen?",
                 answer: "Purrfect",
-                // TODO implement half for the wrong spelling of perfect
+                half: "Perfect"
             },
             {
                 prompt: "In \"Oddworld: Abe's Oddysee\", Abe is a factory worker and employee of the year at \"Rupture Farms\". What does Abe learn during the opening cutscene that causes him to try to escape the factory?",
@@ -105,7 +105,7 @@
             {
                 prompt: "In \"Mario Kart DS\", which track is made in the shape of a character from the series?",
                 answer: "Yoshi Circuit",
-                // TODO implement half for yoshi something
+                half: "Yoshi"
             },
             {
                 prompt: "What is the name of the doctor featured in the \"Brain Training\" series for the Nintendo DS? Maximum of half a mark for bad spelling.",

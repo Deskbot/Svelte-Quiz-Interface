@@ -2,13 +2,16 @@
     import { mark } from "../util/quiz";
 
     export let answer;
-    export let correct;
     export let prompt;
     export let reveal;
+    export let score;
 
     let guess = "";
 
-    $: correct = mark($$props, guess);
+    $: score = mark($$props, guess);
+    $: correct = score === 1;
+    $: half = score === 0.5;
+    $: wrong = score === 0;
 
     function displayAnswer(answer) {
         if (Array.isArray(answer)) {
@@ -23,9 +26,14 @@
         width: 100%;
     }
 
-    .right {
+    .correct {
         border-color: #0C0;
         color: #0C0;
+    }
+
+    .half {
+        border-color: #CC0;
+        color: #CC0;
     }
 
     .wrong {
@@ -37,12 +45,13 @@
 <li>
     <p>{prompt}</p>
     <input
-        class:right={reveal && correct}
-        class:wrong={reveal && !correct}
+        class:correct={reveal && correct}
+        class:half={reveal && half}
+        class:wrong={reveal && wrong}
         bind:value={guess}
         type="text"
     />
-    {#if reveal && !correct }
+    {#if reveal && !correct}
         {displayAnswer(answer)}
     {/if}
 </li>
