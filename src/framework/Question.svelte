@@ -10,8 +10,6 @@
 
     $: score = mark($$props, guess);
     $: correct = score === 1;
-    $: half = score === 0.5;
-    $: wrong = score === 0;
 
     function displayAnswer(answer) {
         if (Array.isArray(answer)) {
@@ -46,8 +44,8 @@
     <p>{prompt}</p>
     <input
         class:correct={reveal && correct}
-        class:half={reveal && half}
-        class:wrong={reveal && wrong}
+        class:half={reveal && score === 0.5}
+        class:wrong={reveal && score === 0}
         bind:value={guess}
         type="text"
     />
