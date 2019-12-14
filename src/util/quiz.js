@@ -1,16 +1,29 @@
 import convert from "number-to-words";
+import { anyTrue } from "./bool";
 
 const ignoreChars = /[\s,\.:'@~#\]\[\}\{\+=\-_\)\(\*&\^%\$£"!\\`¬<>\?/\|]/gi;
 
+// handle the different answer formats
 export function mark(question, guess) {
-    if (typeof question.answer === "number") {
-        return matchNumber(question.answer, guess);
+    if (Array.isArray(question.answer)) {
+        return anyTrue(question.answer, possibleAns => markAnswer(possibleAns, guess));
     }
 
-    guess = normalise(guess);
-    if (question.matcher) return match(question.matcher, guess);
+    if (question.matcher) return markMatcher(question.matcher, guess);
 
-    return guess.includes(normalise(question.answer));
+    return markAnswer(question.answer, guess);
+}
+
+function markAnswer(answer, guess) {
+    if (typeof answer === "number") {
+        return matchNumber(answer, guess);
+    }
+
+    return normalise(guess).includes(normalise(answer));
+}
+
+function markMatcher(matcher, guess) {
+    return match(matcher, normalise(guess));
 }
 
 function match(matcher, str) {
@@ -25,8 +38,8 @@ function match(matcher, str) {
 }
 
 function matchNumber(answer, guess) {
-    if (guess.toString() === answer) return true;
-    if (convert.toWords(guess) === answer) return true;
+    if (answer.toString() === guess) return true;
+    if (convert.toWords(answer) === guess) return true;
     return false;
 }
 

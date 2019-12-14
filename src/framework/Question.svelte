@@ -9,6 +9,13 @@
     let guess = "";
 
     $: correct = mark($$props, guess);
+
+    function displayAnswer(answer) {
+        if (Array.isArray(answer)) {
+            return answer.join(" / ");
+        }
+        return answer;
+    }
 </script>
 
 <style>
@@ -36,6 +43,6 @@
         type="text"
     />
     {#if reveal && !correct }
-        {answer}
+        {displayAnswer(answer)}
     {/if}
 </li>
