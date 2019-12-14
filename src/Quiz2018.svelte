@@ -30,6 +30,10 @@
                 matcher: /miles.*prower/
             },
             {
+                prompt: "Helix, Ribbon Girl, and Master Mummy are characters from which game(s)?",
+	            answer: "Arms"
+            },
+            {
                 prompt: "Which is the only Dark Souls character to have an Amiibo?",
                 answer: "Solaire of Astora",
                 matcher: /solaire.*/
