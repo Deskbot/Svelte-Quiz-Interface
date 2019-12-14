@@ -59,11 +59,11 @@
         questions={[
             {
                 prompt: "In \"Cel Damage\" (and its re-releases under slightly different titles), there are several whacky playable characters including a devil called \"Sinder\", a T-Rex called \"T. Wrecks\", and an eastern European dominatrix. Name that dominatrix!",
-                answer: "Dominique Trix".
+                answer: "Dominique Trix",
                 // TODO implement half for each half of the name
             },
             {
-                prompt: "In \"Spiderman 3\" for the PS2, PSP, and Wii there are several super villains, however some of these villains did not appear in the movie the game was based on. Name two of those villains! For 2 points."
+                prompt: "In \"Spiderman 3\" for the PS2, PSP, and Wii there are several super villains, however some of these villains did not appear in the movie the game was based on. Name two of those villains! For 2 points.",
                 answer: [
                     "Morbius",
                     "Shriek",
@@ -86,17 +86,17 @@
                 answer: "He learns that his species is to be turned into food to save the company from falling profits."
             },
             {
-                prompt; "In \"Sonic Heroes\", who is the mysterious client who \"Team Chaotix\" rescue from Eggman's Sky Base?",
+                prompt: "In \"Sonic Heroes\", who is the mysterious client who \"Team Chaotix\" rescue from Eggman's Sky Base?",
                 answer: "Dr. Eggman / Dr. Robotnik",
             },
             {
                 prompt: "Introduced to the series in \"Tekken 3\", Eddy Gordo uses which style of martial arts?",
-                answer: "Capoeira"
+                answer: "Capoeira",
                 matcher: /[ck]apo[aeiou]+ra/
             },
             {
                 prompt: "In \"The Simpsons: Hit & Run\" there are many blue crates situated about the overworld that give you money when destroyed. What is written on each of the blue crates?",
-                answer: "Buzz Cola"
+                answer: "Buzz Cola",
             },
             {
                 prompt: "In \"Mario Kart DS\", which track is made in the shape of a character from the series?",
