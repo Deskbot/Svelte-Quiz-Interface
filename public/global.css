@@ -3,7 +3,7 @@
 }
 
 *::selection {
-	background: #C0A5FF
+	background: #95f;
 }
 
 html, body {
@@ -21,7 +21,7 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
+	color: #0064c8;
 	text-decoration: none;
 }
 
@@ -30,7 +30,7 @@ a:hover {
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: #0050a0;
 }
 
 label {
