@@ -90,7 +90,7 @@
                 answer: "He learns that his species is to be turned into food to save the company from falling profits."
             },
             {
-                prompt: "In \"Sonic Heroes\", who is the mysterious client who \"Team Chaotix\" rescue from Eggman's Sky Base?",
+                prompt: "In \"Sonic Heroes\", who is the mysterious client who \"Team Chaotix\" rescue from Dr. Eggman's Sky Base?",
                 answer: "Dr. Eggman / Dr. Robotnik",
             },
             {
