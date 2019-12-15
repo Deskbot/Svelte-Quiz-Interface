@@ -156,4 +156,14 @@
             }
         ]}
     />
+    <Round
+        name="Picture"
+        questions={[
+            {
+                picture: "/framework/1.png",
+                answer: "Grim Fandango",
+                half: /.*(grim|fandango).*/,
+            }
+        ]}
+    />
 </main>
