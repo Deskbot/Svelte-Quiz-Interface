@@ -1,6 +1,9 @@
 MVP
 ---
 
+* picture round
+* music round
+
 Stretch
 -------
 
