@@ -52,8 +52,8 @@
             bind:value={guesses[partNumber]}
             type="text"
         />
-        {#if reveal && !correct}
-            {displayAnswer(answer)}
-        {/if}
     {/each}
+    {#if reveal && !correct}
+        {displayAnswer(answer)}
+    {/if}
 </li>
