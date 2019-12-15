@@ -114,4 +114,46 @@
             }
         ]}
     />
+    <Round
+        name={"Design and Development"}
+        questions={[
+            {
+                prompt: "What unreleased game, announced at E3 2016 was Hideo Kojima currently directing in 2018?",
+                answer: "Death Stranding",
+            },
+            {
+                prompt: "How many different official \"Harry Potter and the Chamber of Secrets\" video games were developed?",
+                answer: 5,
+            },
+            {
+                prompt: "What is the name of the Diablo mobile game, announced in 2018?",
+                answer: "Diablo: Immortal"
+            },
+            {
+                prompt: "With the release of Pokémon Sun & Moon in 2016, which Pokémon no longer has the ability to levitate?",
+                answer: "Gengar"
+            },
+            {
+                prompt: "What is the name of the first scrapped CD-ROM add-on for the SNES?",
+                answer: ["Playstation", "SNES-CD"]
+            },
+            {
+                prompt: "Who engineered the first prototype of Breakout?",
+                answer: "Steve Wozniak"
+            },
+            {
+                prompt: "Who designed the Game of Life?",
+                answer: "John Horton Conway",
+                matcher: /John.*Conway/
+            },
+            {
+                prompt: "What is the name of the mythical arcade game that according to urban legend was part of a covert psychology experiment by the US government?",
+                answer: "Polybius"
+            },
+            {
+                prompt: "What is the name of Fortnite's co-op zombie survival game mode?",
+                answer: "Fortnite: Save the World"
+            }
+        ]}
+    />
 </main>
