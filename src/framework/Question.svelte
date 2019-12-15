@@ -8,10 +8,10 @@
     export let reveal;
     export let score;
 
-    let guess = "";
+    let guesses = [];
 
-    $: score = mark($$props, guess);
-    $: correct = score === 1;
+    $: score = guesses.reduce((tot, guess) => tot + mark($$props, guess), 0);
+    $: correct = score === outOf;
 
     function displayAnswer(answer) {
         if (Array.isArray(answer)) {
@@ -47,9 +47,9 @@
     {#each [...range(0, outOf)] as partNumber}
         <input
             class:correct={reveal && correct}
-            class:half={reveal && score === 0.5}
+            class:half={reveal && score < outOf && score > 0}
             class:wrong={reveal && score === 0}
-            bind:value={guess}
+            bind:value={guesses[partNumber]}
             type="text"
         />
         {#if reveal && !correct}
