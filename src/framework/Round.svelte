@@ -1,4 +1,5 @@
 <script>
+    import ImagePrompt from "./ImagePrompt.svelte";
     import Question from "./Question.svelte";
     import Result from "./Result.svelte";
 
@@ -31,7 +32,11 @@
                 reveal={submitted}
             >
                 {#if question.picture !== undefined}
-                    <img src={question.picture} alt={`${name} Round. Question ${qNum + 1}.`}/>
+                    <ImagePrompt
+                        roundName={name}
+                        picturePath={question.picture}
+                        qNum={qNum + 1}
+                    />
                 {:else}
                     <p>{question.prompt}</p>
                 {/if}
