@@ -4,7 +4,6 @@
 
     export let answer;
     export let outOf = 1;
-    export let prompt;
     export let reveal;
     export let score;
 
@@ -43,7 +42,7 @@
 </style>
 
 <li>
-    <p>{prompt}</p>
+    <slot/>
     {#each [...range(0, outOf)] as partNumber}
         <input
             class:correct={reveal && correct}

@@ -160,7 +160,7 @@
         name="Picture"
         questions={[
             {
-                picture: "/framework/1.png",
+                picture: "/media/2018/picture/1.png",
                 answer: "Grim Fandango",
                 half: /.*(grim|fandango).*/,
             }

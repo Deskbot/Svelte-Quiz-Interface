@@ -29,7 +29,13 @@
                 {...question}
                 bind:score={questionScores[qNum]}
                 reveal={submitted}
-            />
+            >
+                {#if question.picture !== undefined}
+                    <img src={question.picture} alt={`${name} Round. Question ${qNum + 1}.`}/>
+                {:else}
+                    <p>{question.prompt}</p>
+                {/if}
+            </Question>
         {/each}
     </ol>
     <button
