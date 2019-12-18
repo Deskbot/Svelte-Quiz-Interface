@@ -25,6 +25,12 @@
         width: 100%;
     }
 
+    li {
+        display: inline-block;
+        flex: 0 1 auto;
+        width: 33%;
+    }
+
     .correct {
         border-color: #0C0;
         color: #0C0;
@@ -41,18 +47,16 @@
     }
 </style>
 
-<li>
-    <slot/>
-    {#each [...range(0, outOf)] as partNumber}
-        <input
-            class:correct={reveal && correct}
-            class:half={reveal && score < outOf && score > 0}
-            class:wrong={reveal && score === 0}
-            bind:value={guesses[partNumber]}
-            type="text"
-        />
-    {/each}
-    {#if reveal && !correct}
-        {displayAnswer(answer)}
-    {/if}
-</li>
+<slot/>
+{#each [...range(0, outOf)] as partNumber}
+    <input
+        class:correct={reveal && correct}
+        class:half={reveal && score < outOf && score > 0}
+        class:wrong={reveal && score === 0}
+        bind:value={guesses[partNumber]}
+        type="text"
+    />
+{/each}
+{#if reveal && !correct}
+    {displayAnswer(answer)}
+{/if}

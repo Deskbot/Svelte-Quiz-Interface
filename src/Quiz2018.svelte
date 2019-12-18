@@ -163,6 +163,11 @@
                 picture: "/media/2018/picture/1.png",
                 answer: "Grim Fandango",
                 half: /.*(grim|fandango).*/,
+            },
+            {
+                picture: "/media/2018/picture/2.png",
+                answer: "Hollow Knight",
+                half: /.*(hollow|knight).*/,
             }
         ]}
     />

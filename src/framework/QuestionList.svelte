@@ -1,6 +1,7 @@
 <script>
     import ImagePrompt from "./ImagePrompt.svelte";
     import Question from "./Question.svelte";
+    import QuestionListItem from "./QuestionListItem.svelte";
 
     export let questions;
     export let reveal;
@@ -20,20 +21,22 @@
 
 <ol>
     {#each questions as question, qNum}
-        <Question
-            {...question}
-            {reveal}
-            bind:score={questionScores[qNum]}
-        >
-            {#if question.picture !== undefined}
-                <ImagePrompt
-                    picturePath={question.picture}
-                    qNum={qNum + 1}
-                    {roundName}
-                />
-            {:else}
-                <p>{question.prompt}</p>
-            {/if}
-        </Question>
+        <QuestionListItem>
+            <Question
+                {...question}
+                {reveal}
+                bind:score={questionScores[qNum]}
+            >
+                {#if question.picture !== undefined}
+                    <ImagePrompt
+                        picturePath={question.picture}
+                        qNum={qNum + 1}
+                        {roundName}
+                    />
+                {:else}
+                    <p>{question.prompt}</p>
+                {/if}
+            </Question>
+        </QuestionListItem>
     {/each}
 </ol>
