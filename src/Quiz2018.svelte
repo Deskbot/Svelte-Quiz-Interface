@@ -147,7 +147,8 @@
             {
                 prompt: "Who designed the Game of Life?",
                 answer: "John Horton Conway",
-                matcher: /John.*Conway/
+                matcher: /joh?n.*conway/,
+                half: /.*joh?n|conway.*/,
             },
             {
                 prompt: "What is the name of the mythical arcade game that according to urban legend was part of a covert psychology experiment by the US government?",
