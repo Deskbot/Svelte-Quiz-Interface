@@ -4,6 +4,7 @@
 
     export let name;
     export let questions;
+    export let type;
 
     let score; //can bind:score this be trimmed down?
     let submitted = false;
@@ -27,6 +28,7 @@
             reveal={submitted}
             roundName={name}
             bind:score={score}
+            {type}
         />
     </div>
     <button on:click={mark}>
