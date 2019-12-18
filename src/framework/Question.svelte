@@ -25,12 +25,6 @@
         width: 100%;
     }
 
-    li {
-        display: inline-block;
-        flex: 0 1 auto;
-        width: 33%;
-    }
-
     .correct {
         border-color: #0C0;
         color: #0C0;
