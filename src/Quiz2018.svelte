@@ -118,7 +118,7 @@
         name={"Design and Development"}
         questions={[
             {
-                prompt: "What unreleased game, announced at E3 2016 was Hideo Kojima currently directing in 2018?",
+                prompt: "What game, announced at E3 2016, was Hideo Kojima directing?",
                 answer: "Death Stranding",
             },
             {
@@ -126,7 +126,7 @@
                 answer: 5,
             },
             {
-                prompt: "What is the name of the Diablo mobile game, announced in 2018?",
+                prompt: "What is the name of the Diablo mobile game announced in 2018?",
                 answer: "Diablo: Immortal"
             },
             {
