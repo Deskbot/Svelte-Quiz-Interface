@@ -1,8 +1,8 @@
 <script>
-    import ImagePrompt from "./ImagePrompt.svelte";
+    import PicturePrompt from "./round-types/PicturePrompt.svelte";
+    import PictureQuestionListItem from "./round-types/PictureQuestionListItem.svelte";
     import Question from "./Question.svelte";
-    import PictureQuestionListItem from "./PictureQuestionListItem.svelte";
-    import TextQuestionListItem from "./TextQuestionListItem.svelte";
+    import TextQuestionListItem from "./round-types/TextQuestionListItem.svelte";
 
     export let questions;
     export let reveal;
@@ -11,7 +11,6 @@
     export let type;
 
     const questionScores = new Array(questions.length).fill(0);
-
     $: score = questionScores.reduce((tot, score) => tot + score);
 </script>
 
@@ -23,14 +22,14 @@
 
 <ol>
     {#each questions as question, qNum}
-        {#if type==="picture"}
+        {#if type === "picture"}
             <PictureQuestionListItem>
                 <Question
                     {...question}
                     {reveal}
                     bind:score={questionScores[qNum]}
                 >
-                    <ImagePrompt
+                    <PicturePrompt
                         picturePath={question.picture}
                         qNum={qNum + 1}
                         {roundName}
