@@ -60,7 +60,7 @@
         ]}
     />
     <Round
-        name="Games from Thomas's Childhood"
+        name="Games from Thomas's Childhood Round"
         format="text"
         questions={[
             {
@@ -117,7 +117,7 @@
         ]}
     />
     <Round
-        name={"Design and Development"}
+        name={"Design and Development Round"}
         format="text"
         questions={[
             {
@@ -161,7 +161,7 @@
         ]}
     />
     <Round
-        name="Picture"
+        name="Picture Round"
         format="picture"
         questions={[
             {
@@ -174,6 +174,16 @@
                 answer: "Hollow Knight",
                 half: /.*(hollow|knight).*/,
             }
+        ]}
+    />
+    <Round
+        name="Music Round"
+        format="audio"
+        questions={[
+            {
+                audio: "/media/2018/audio/1.wav",
+                answer: "Papers Please",
+            },
         ]}
     />
 </main>

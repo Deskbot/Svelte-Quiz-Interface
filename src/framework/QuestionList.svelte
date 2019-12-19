@@ -1,14 +1,15 @@
 <script>
+    import AudioPrompt from "./format/AudioPrompt.svelte";
     import PicturePrompt from "./format/PicturePrompt.svelte";
     import PictureQuestionListItem from "./format/PictureQuestionListItem.svelte";
     import Question from "./Question.svelte";
     import TextQuestionListItem from "./format/TextQuestionListItem.svelte";
 
+    export let format;
     export let questions;
     export let reveal;
     export let roundName;
     export let score;
-    export let format;
 
     const questionScores = new Array(questions.length).fill(0);
     $: score = questionScores.reduce((tot, score) => tot + score);
@@ -36,7 +37,19 @@
                     />
                 </Question>
             </PictureQuestionListItem>
-        {:else}
+        {:else if format === "audio"}
+            <PictureQuestionListItem>
+                <Question
+                    {...question}
+                    {reveal}
+                    bind:score={questionScores[qNum]}
+                >
+                    <AudioPrompt
+                        path={question.audio}
+                    />
+                </Question>
+            </PictureQuestionListItem>
+        {:else if format === "text"}
             <TextQuestionListItem>
                 <Question
                     {...question}
