@@ -2,7 +2,7 @@
     div {
         display: inline-block;
         flex: 0 1 auto;
-        width: 33%;
+        max-width: 24rem;
     }
 
     li {
