@@ -247,6 +247,20 @@
                 audio: "/media/2018/audio/1.wav",
                 answer: "Papers Please",
             },
+            {
+                audio: "/media/2018/audio/2.wav",
+                answer: "Super Metroid",
+                matcher: /.*metroid.*/
+            },
+            {
+                audio: "/media/2018/audio/3.wav",
+                answer: "Toki Tori 2",
+                matcher: /toki\s*tori\s*(2|two)/,
+            },
+            {
+                audio: "/media/2018/audio/4.wav",
+                answer: "Bayonetta",
+            },
         ]}
     />
 </main>
