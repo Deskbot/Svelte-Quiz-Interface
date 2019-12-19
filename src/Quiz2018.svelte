@@ -173,6 +173,67 @@
                 picture: "/media/2018/picture/2.png",
                 answer: "Hollow Knight",
                 half: /.*(hollow|knight).*/,
+            },
+            {
+                picture: "/media/2018/picture/3.png",
+                answer: "Overwatch",
+            },
+            {
+                picture: "/media/2018/picture/4.png",
+                answer: "Limbo",
+            },
+            {
+                picture: "/media/2018/picture/5.png",
+                answer: "Team Fortress 2",
+                matcher: /team\s*fortress\s*(2|two)/
+            },
+            {
+                picture: "/media/2018/picture/6.png",
+                answer: "Zuma",
+            },
+            {
+                picture: "/media/2018/picture/7.png",
+                answer: "Pacman",
+            },
+            {
+                picture: "/media/2018/picture/8.png",
+                answer: "Space Impact",
+                half: /.*(space).*/,
+            },
+            {
+                picture: "/media/2018/picture/9.png",
+                answer: "Hyper Light Drifter",
+                matcher: /Hyper\s*Light\s*Drifter/
+            },
+            {
+                picture: "/media/2018/picture/10.png",
+                answer: "Portal 2",
+                matcher: /portal\s*(2|two)/,
+                half: /.*(portal).*/,
+            },
+            {
+                picture: "/media/2018/picture/Bonus 1.png",
+                answer: "Super Smash Brothers Ultimate",
+                matcher: /.*smash.*ultimate/,
+            },
+            {
+                picture: "/media/2018/picture/Bonus 2.png",
+                answer: "Player Unknown's: Battlegrounds",
+                half: /.*(PUBG|battlegrounds?)/,
+            },
+            {
+                picture: "/media/2018/picture/Bonus 3.png",
+                answer: "Cuphead",
+            },
+            {
+                picture: "/media/2018/picture/Bonus 4.png",
+                answer: "Tetris",
+            },
+            {
+                picture: "/media/2018/picture/Bonus 5.png",
+                answer: "Mario Kart 8 Deluxe",
+                matcher: /mario\s*[ck]art\s*(8|eight)\s*deluxe/,
+                half: /mario\s*[ck]art\s*(8|eight)\s*/,
             }
         ]}
     />
