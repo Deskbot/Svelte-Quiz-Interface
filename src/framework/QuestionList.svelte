@@ -1,14 +1,14 @@
 <script>
-    import PicturePrompt from "./round-types/PicturePrompt.svelte";
-    import PictureQuestionListItem from "./round-types/PictureQuestionListItem.svelte";
+    import PicturePrompt from "./format/PicturePrompt.svelte";
+    import PictureQuestionListItem from "./format/PictureQuestionListItem.svelte";
     import Question from "./Question.svelte";
-    import TextQuestionListItem from "./round-types/TextQuestionListItem.svelte";
+    import TextQuestionListItem from "./format/TextQuestionListItem.svelte";
 
     export let questions;
     export let reveal;
     export let roundName;
     export let score;
-    export let type;
+    export let format;
 
     const questionScores = new Array(questions.length).fill(0);
     $: score = questionScores.reduce((tot, score) => tot + score);
@@ -22,7 +22,7 @@
 
 <ol>
     {#each questions as question, qNum}
-        {#if type === "picture"}
+        {#if format === "picture"}
             <PictureQuestionListItem>
                 <Question
                     {...question}
@@ -47,6 +47,5 @@
                 </Question>
             </TextQuestionListItem>
         {/if}
-
     {/each}
 </ol>

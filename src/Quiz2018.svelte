@@ -9,7 +9,7 @@
 <main>
     <Round
         name="The Knowledge Round"
-        type="text"
+        format="text"
         questions={[
             {
                 prompt: "\"Card Wars\" is a digital card game originating from which children's TV programme?",
@@ -61,7 +61,7 @@
     />
     <Round
         name="Games from Thomas's Childhood"
-        type="text"
+        format="text"
         questions={[
             {
                 prompt: "In \"Cel Damage\" (and its re-releases under slightly different titles), there are several whacky playable characters including a devil called \"Sinder\", a T-Rex called \"T. Wrecks\", and an eastern European dominatrix. Name that dominatrix!",
@@ -118,7 +118,7 @@
     />
     <Round
         name={"Design and Development"}
-        type="text"
+        format="text"
         questions={[
             {
                 prompt: "What game, announced at E3 2016, was Hideo Kojima directing?",
@@ -162,7 +162,7 @@
     />
     <Round
         name="Picture"
-        type="picture"
+        format="picture"
         questions={[
             {
                 picture: "/media/2018/picture/1.png",
