@@ -6,8 +6,8 @@
 
 <style>
     img {
-        max-height: 300px;
-        width: 300px;
+        max-height: 20rem;
+        width: 20rem;
     }
 </style>
 
