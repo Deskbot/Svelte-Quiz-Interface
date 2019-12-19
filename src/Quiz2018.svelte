@@ -162,6 +162,7 @@
     />
     <Round
         name="Picture Round"
+        explanation="For each screenshots and logo, name the game the the image is from."
         format="picture"
         questions={[
             {
@@ -240,6 +241,7 @@
     <Round
         name="Music Round"
         format="audio"
+        explanation="For each music clip, name the game that music comes from."
         questions={[
             {
                 audio: "/media/2018/audio/1.wav",

@@ -2,9 +2,10 @@
     import QuestionList from "./QuestionList.svelte";
     import Result from "./Result.svelte";
 
+    export let explanation = undefined;
+    export let format;
     export let name;
     export let questions;
-    export let format;
 
     let score; //can bind:score this be trimmed down?
     let submitted = false;
@@ -22,6 +23,9 @@
 
 <section>
     <h2>{name}</h2>
+    {#if explanation !== undefined}
+        <p>{explanation}</p>
+    {/if}
     <div id="question-container">
         <QuestionList
             {questions}
