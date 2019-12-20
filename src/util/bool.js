@@ -5,3 +5,7 @@ export function anyTrue(arr, pred) {
 
     return false;
 }
+
+export function countIf(arr, pred) {
+    return arr.filter(elem => pred(elem)).length;
+}

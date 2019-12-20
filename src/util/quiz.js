@@ -1,26 +1,38 @@
 import convert from "number-to-words";
-import { anyTrue } from "./bool";
+import { countIf } from "./bool";
 
 const ignoreChars = /[\s,\.:'@~#\]\[\}\{\+=\-_\)\(\*&\^%\$£"!\\`¬<>\?/\|]/gi;
 
 // handle the different answer formats
-export function mark(question, guess) {
+export function mark(question, guess, outOf) {
+    if (guess === undefined) {
+        return 0;
+    }
+
+    if (Array.isArray(question.answer)) {
+        return Math.min(outOf, countCorrect(question, guess));
+    }
+
     if (isFullyCorrect(question, guess)) {
-        return 1;
+        return outOf;
     }
 
     if (half(question, guess)) {
-        return 0.5;
+        return outOf / 2;
     }
 
     return 0;
 }
 
-function isFullyCorrect(question, guess) {
-    if (Array.isArray(question.answer)) {
-        return anyTrue(question.answer, possibleAns => isAnswer(possibleAns, guess));
+function countCorrect(question, guess) {
+    if (question.matcher) {
+        return countIf(question.matcher, possibleMatch => matcherMatches(possibleMatch, guess));
+    } else {
+        return countIf(question.answer, possibleAns => isAnswer(possibleAns, guess));
     }
+}
 
+function isFullyCorrect(question, guess) {
     if (question.matcher) return matcherMatches(question.matcher, guess);
 
     return isAnswer(question.answer, guess);

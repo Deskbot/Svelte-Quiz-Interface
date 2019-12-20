@@ -23,11 +23,16 @@
         justify-content: center;
         margin: 0 0 1rem 0;
     }
+
+    ol.picture {
+        margin: 0;
+    }
 </style>
 
-<ol>
-    {#each questions as question, qNum}
-        {#if format === "picture"}
+
+{#if format === "picture"}
+    <ol class="picture">
+        {#each questions as question, qNum}
             <PictureQuestionListItem>
                 <Question
                     {...question}
@@ -41,7 +46,11 @@
                     />
                 </Question>
             </PictureQuestionListItem>
-        {:else if format === "audio"}
+        {/each}
+    </ol>
+{:else if format === "audio"}
+    <ol>
+        {#each questions as question, qNum}
             <PictureQuestionListItem>
                 <Question
                     {...question}
@@ -53,7 +62,11 @@
                     />
                 </Question>
             </PictureQuestionListItem>
-        {:else if format === "text"}
+        {/each}
+    </ol>
+{:else if format === "text"}
+    <ol>
+        {#each questions as question, qNum}
             <TextQuestionListItem>
                 <Question
                     {...question}
@@ -63,6 +76,6 @@
                     <p>{question.prompt}</p>
                 </Question>
             </TextQuestionListItem>
-        {/if}
     {/each}
-</ol>
+    </ol>
+{/if}

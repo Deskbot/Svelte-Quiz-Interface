@@ -8,9 +8,9 @@
     export let reveal;
     export let score;
 
-    let guesses = [];
+    let guess;
 
-    $: score = guesses.reduce((tot, guess) => tot + mark($$props, guess), 0);
+    $: score = mark($$props, guess, outOf);
     $: correct = score === outOf;
 
     function displayAnswer(answer) {
@@ -89,15 +89,13 @@
     bind:this={inputContainer}
     class:single-line={singleLineInputAnswer}
 >
-    {#each [...range(0, outOf)] as partNumber}
-        <input
-            class:correct={reveal && correct}
-            class:half={reveal && score < outOf && score > 0}
-            class:wrong={reveal && score === 0}
-            bind:value={guesses[partNumber]}
-            type="text"
-        />
-    {/each}
+    <input
+        class:correct={reveal && correct}
+        class:half={reveal && score < outOf && score > 0}
+        class:wrong={reveal && score === 0}
+        bind:value={guess}
+        type="text"
+    />
     {#if reveal && !correct}
         <span>
             {displayAnswer(answer)}
