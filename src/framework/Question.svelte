@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from "svelte";
     import { mark } from "../util/quiz";
     import { range } from "../util/arr";
 
@@ -18,10 +19,23 @@
         }
         return answer;
     }
+
+    let inputContainer;
+    let singleLineInputAnswer;
+
+    function repositionInput() {
+        singleLineInputAnswer = inputContainer.offsetWidth > 500;
+    }
+
+    onMount(() => {
+        window.addEventListener("resize", repositionInput);
+        repositionInput();
+    });
 </script>
 
 <style>
-    div {
+    div.single-line {
+        align-items: flex-start;
         display: flex;
     }
 
@@ -29,10 +43,20 @@
         display: block;
         flex-grow: 1;
         margin: 0;
+        width: 100%;
     }
 
     input:not(:first-of-type) {
         margin-left: 0.75rem;
+    }
+
+    span {
+        display: block;
+    }
+
+    .single-line span {
+        margin-left: 0.75rem;
+        width: 40%;
     }
 
     span {
@@ -41,9 +65,7 @@
         flex-direction: column;
         flex-grow: 0;
         justify-content: center;
-        margin-left: 0.75rem;
         vertical-align: middle;
-        width: 40%;
     }
 
     .correct {
@@ -63,7 +85,10 @@
 </style>
 
 <slot/>
-<div>
+<div
+    bind:this={inputContainer}
+    class:single-line={singleLineInputAnswer}
+>
     {#each [...range(0, outOf)] as partNumber}
         <input
             class:correct={reveal && correct}

@@ -17,7 +17,7 @@
 
 <style>
     ol {
-        align-items: flex-end;
+        align-items: flex-start;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
