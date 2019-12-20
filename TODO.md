@@ -1,7 +1,6 @@
 MVP
 ---
 
-* improve CSS for picture questions
 * improve CSS for audio questions
 * add totaka's song question for luigi's mansion
 * use reset css

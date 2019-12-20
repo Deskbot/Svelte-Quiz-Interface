@@ -1,6 +1,5 @@
 <script>
     import QuestionList from "./QuestionList.svelte";
-    import Result from "./Result.svelte";
 
     export let explanation = undefined;
     export let format;
@@ -32,7 +31,12 @@
 </style>
 
 <section>
-    <h2>{name}</h2>
+    <h2>
+        {name}
+        {#if submitted}
+            ({score} / {maxScore})
+        {/if}
+    </h2>
     {#if explanation !== undefined}
         <p>{explanation}</p>
     {/if}
@@ -48,9 +52,6 @@
     </button>
 
     {#if submitted}
-        <Result
-            points={score}
-            outOf={maxScore}
-        />
+        You Scored: {score} / {maxScore}
     {/if}
 </section>
