@@ -58,6 +58,7 @@
                     bind:score={questionScores[qNum]}
                 >
                     <AudioPrompt
+                        caveat={question.caveat}
                         path={question.audio}
                     />
                 </Question>

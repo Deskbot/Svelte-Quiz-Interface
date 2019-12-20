@@ -273,7 +273,9 @@
             },
             {
                 audio: "/media/2018/audio/7.wav",
-                answer: "Luigi's Mansion",
+                answer: ["Luigi's Mansion", "Totaka's Song"],
+                caveat: "You can also earn a point for guessing the name of the tune",
+                outOf: 2,
             },
             {
                 audio: "/media/2018/audio/8.wav",

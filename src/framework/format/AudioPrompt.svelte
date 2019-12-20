@@ -3,6 +3,7 @@
 </script>
 
 <script>
+    export let caveat;
     export let path;
 
     let audio;
@@ -17,6 +18,9 @@
     }
 </script>
 
+{#if caveat !== undefined}
+    <span>{caveat}</span>
+{/if}
 <audio
     controls
     on:play={stopOthers}
