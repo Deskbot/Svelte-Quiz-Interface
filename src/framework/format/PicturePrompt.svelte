@@ -7,6 +7,10 @@
 <style>
     img {
         max-height: 20rem;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
         width: 20rem;
     }
 </style>
