@@ -28,7 +28,6 @@
     input {
         display: block;
         flex-grow: 1;
-        flex-shrink: 1;
         margin: 0;
     }
 
@@ -37,7 +36,14 @@
     }
 
     span {
-        flex-grow: 1;
+        display: flex;
+        height: 2rem;
+        flex-direction: column;
+        flex-grow: 0;
+        justify-content: center;
+        margin-left: 0.75rem;
+        vertical-align: middle;
+        width: 40%;
     }
 
     .correct {

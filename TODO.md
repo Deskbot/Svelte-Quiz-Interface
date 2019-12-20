@@ -1,8 +1,6 @@
 MVP
 ---
 
-* improve layout of text questions
-    * can the input bar be half the width, with the answer put to the right instead of below?
 * improve CSS for picture questions
 * improve CSS for audio questions
 * add totaka's song question for luigi's mansion
