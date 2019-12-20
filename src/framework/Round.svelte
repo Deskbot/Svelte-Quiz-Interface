@@ -10,6 +10,11 @@
     let score; //can bind:score this be trimmed down?
     let submitted = false;
 
+    $: maxScore = questions.reduce(
+        (tot, question) => tot + (question.outOf ? question.outOf : 1),
+        0
+    );
+
     function mark() {
         submitted = true;
     }
@@ -45,7 +50,7 @@
     {#if submitted}
         <Result
             points={score}
-            outOf={questions.length}
+            outOf={maxScore}
         />
     {/if}
 </section>
