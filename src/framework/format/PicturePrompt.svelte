@@ -6,12 +6,14 @@
 
 <style>
     img {
-        margin: 18px 0;
+        line-height: 1rem;
+        margin-bottom: 1rem;
         max-height: 20rem;
         user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
         -ms-user-select: none;
+        vertical-align: top;
         width: 20rem;
     }
 </style>

@@ -17,6 +17,7 @@
 
 <style>
     ol {
+        align-items: flex-end;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;

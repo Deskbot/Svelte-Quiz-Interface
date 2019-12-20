@@ -25,7 +25,7 @@
         top: 0;
     }
 
-    #question-container {
+    div {
         padding: 0 40px;
     }
 </style>
@@ -35,7 +35,7 @@
     {#if explanation !== undefined}
         <p>{explanation}</p>
     {/if}
-    <div id="question-container">
+    <div>
         <QuestionList
             {questions}
             reveal={submitted}

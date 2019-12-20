@@ -6,7 +6,8 @@
     }
 
     li {
-        text-align: center;
+        margin: 0 1rem 1rem 1rem;
+        padding-left: 0.5rem;
     }
 </style>
 
