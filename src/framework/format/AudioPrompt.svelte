@@ -14,7 +14,7 @@
             current.pause();
         }
 		current = audio;
-	}
+    }
 </script>
 
 <audio
@@ -24,4 +24,3 @@
     bind:paused
     bind:this={audio}
 />
-
