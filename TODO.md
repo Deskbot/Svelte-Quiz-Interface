@@ -1,7 +1,6 @@
 MVP
 ---
 
-* sticky headers for round names
 * improve layout of text questions
     * can the input bar be half the width, with the answer put to the right instead of below?
 * improve CSS for picture questions

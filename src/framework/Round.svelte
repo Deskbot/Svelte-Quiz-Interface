@@ -16,6 +16,15 @@
 </script>
 
 <style>
+    h2 {
+        background-color: var(--background);
+        margin: 0;
+        padding: 1rem 0 0.5rem 0;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+    }
+
     #question-container {
         padding: 0 40px;
     }

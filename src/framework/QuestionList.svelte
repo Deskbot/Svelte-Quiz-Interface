@@ -20,6 +20,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 0 0 1rem 0;
         padding: 0;
     }
 </style>
