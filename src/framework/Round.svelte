@@ -24,10 +24,6 @@
         position: -webkit-sticky;
         top: 0;
     }
-
-    div {
-        padding: 0 40px;
-    }
 </style>
 
 <section>
@@ -35,15 +31,13 @@
     {#if explanation !== undefined}
         <p>{explanation}</p>
     {/if}
-    <div>
-        <QuestionList
-            {questions}
-            reveal={submitted}
-            roundName={name}
-            bind:score={score}
-            {format}
-        />
-    </div>
+    <QuestionList
+        {questions}
+        reveal={submitted}
+        roundName={name}
+        bind:score={score}
+        {format}
+    />
     <button on:click={mark}>
         Mark
     </button>

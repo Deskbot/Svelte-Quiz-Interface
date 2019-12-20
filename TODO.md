@@ -19,3 +19,4 @@ Stretch
 * don't use whole path for images?
 * rename picturePath -> path
 * consistent quotes in rollup file
+* make space impact be aligned to the top while its input is aligned bottom

@@ -20,9 +20,8 @@
         align-items: flex-end;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
         margin: 0 0 1rem 0;
-        padding: 0;
     }
 </style>
 
