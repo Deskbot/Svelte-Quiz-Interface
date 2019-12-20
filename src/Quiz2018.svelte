@@ -1,12 +1,13 @@
 <script>
     import Round from "./framework/Round.svelte";
+    import Quiz from "./framework/Quiz.svelte";
 </script>
 
 <style>
 
 </style>
 
-<main>
+<Quiz>
     <Round
         name="The Knowledge Round"
         format="text"
@@ -287,4 +288,4 @@
             },
         ]}
     />
-</main>
+</Quiz>
