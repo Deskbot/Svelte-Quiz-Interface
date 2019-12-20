@@ -28,7 +28,12 @@
     input {
         display: block;
         flex-grow: 1;
-        margin: 0 1rem 0 0;
+        flex-shrink: 1;
+        margin: 0;
+    }
+
+    input:not(:first-of-type) {
+        margin-left: 0.75rem;
     }
 
     span {
