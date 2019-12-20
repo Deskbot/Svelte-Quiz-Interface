@@ -21,8 +21,18 @@
 </script>
 
 <style>
+    div {
+        display: flex;
+    }
+
     input {
-        width: 100%;
+        display: block;
+        flex-grow: 1;
+        margin: 0 1rem 0 0;
+    }
+
+    span {
+        flex-grow: 1;
     }
 
     .correct {
@@ -42,15 +52,19 @@
 </style>
 
 <slot/>
-{#each [...range(0, outOf)] as partNumber}
-    <input
-        class:correct={reveal && correct}
-        class:half={reveal && score < outOf && score > 0}
-        class:wrong={reveal && score === 0}
-        bind:value={guesses[partNumber]}
-        type="text"
-    />
-{/each}
-{#if reveal && !correct}
-    {displayAnswer(answer)}
-{/if}
+<div>
+    {#each [...range(0, outOf)] as partNumber}
+        <input
+            class:correct={reveal && correct}
+            class:half={reveal && score < outOf && score > 0}
+            class:wrong={reveal && score === 0}
+            bind:value={guesses[partNumber]}
+            type="text"
+        />
+    {/each}
+    {#if reveal && !correct}
+        <span>
+            {displayAnswer(answer)}
+        </span>
+    {/if}
+</div>
