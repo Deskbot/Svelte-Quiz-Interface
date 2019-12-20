@@ -261,6 +261,30 @@
                 audio: "/media/2018/audio/4.wav",
                 answer: "Bayonetta",
             },
+            {
+                audio: "/media/2018/audio/5.wav",
+                answer: "God of War",
+            },
+            {
+                audio: "/media/2018/audio/6.wav",
+                answer: "Shovel Knight",
+            },
+            {
+                audio: "/media/2018/audio/7.wav",
+                answer: "Luigi's Mansion",
+            },
+            {
+                audio: "/media/2018/audio/8.wav",
+                answer: "Sonic Heroes",
+            },
+            {
+                audio: "/media/2018/audio/9.wav",
+                answer: "Undertale",
+            },
+            {
+                audio: "/media/2018/audio/10.wav",
+                answer: "Octopath Traveller",
+            },
         ]}
     />
 </main>
