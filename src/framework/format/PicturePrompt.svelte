@@ -6,6 +6,7 @@
 
 <style>
     img {
+        margin: 18px 0;
         max-height: 20rem;
         user-select: none;
         -moz-user-select: none;
