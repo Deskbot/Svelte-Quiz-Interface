@@ -162,7 +162,7 @@
     />
     <Round
         name="Picture Round"
-        explanation="For each screenshots and logo, name the game the the image is from."
+        explanation="For each screenshot and logo, name the game the the image is from."
         format="picture"
         questions={[
             {

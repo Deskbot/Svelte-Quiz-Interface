@@ -8,6 +8,7 @@ MVP
 * improve CSS for audio questions
 * add totaka's song question for luigi's mansion
 * update README
+* read everything to check for spag
 
 Stretch
 -------
