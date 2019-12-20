@@ -24,7 +24,7 @@
     let singleLineInputAnswer;
 
     function repositionInput() {
-        singleLineInputAnswer = inputContainer.offsetWidth > 500;
+        singleLineInputAnswer = inputContainer.offsetWidth > 960;
     }
 
     onMount(() => {
