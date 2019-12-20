@@ -1,7 +1,7 @@
 <style>
     li {
         flex-basis: 100%;
-        margin-left: 2rem;
+        margin: 0 2rem;
     }
 </style>
 
