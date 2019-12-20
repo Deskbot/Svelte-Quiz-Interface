@@ -2,9 +2,7 @@ MVP
 ---
 
 * improve CSS for audio questions
-* add totaka's song question for luigi's mansion
 * use reset css
-* put the score for the round next to the header
 * update README
 * read everything to check for spag
 * don't allow question updates after pressing mark
