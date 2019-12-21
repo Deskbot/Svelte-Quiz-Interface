@@ -54,21 +54,19 @@
         margin-left: 0.75rem;
     }
 
-    span {
-        display: block;
-    }
-
     .single-line span {
-        margin-left: 0.75rem;
+        height: 2rem;
+        margin: 0 0 0 0.75rem;
         width: 40%;
     }
 
     span {
         display: flex;
-        height: 2rem;
         flex-direction: column;
         flex-grow: 0;
+        height: 1rem;
         justify-content: center;
+        margin: 1rem 0 0 0;
         vertical-align: middle;
     }
 

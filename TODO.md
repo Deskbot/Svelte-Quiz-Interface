@@ -2,7 +2,6 @@ MVP
 ---
 
 * use reset css
-* update README
 * read everything to check for spag
 * don't allow question updates after pressing mark
 
