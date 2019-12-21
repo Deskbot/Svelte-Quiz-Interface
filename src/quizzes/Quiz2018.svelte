@@ -75,8 +75,11 @@
                     "The Mad Bomber Group",
                 ],
                 matcher: [
-                    /Lizard/,
-                    /MadBomber/,
+                    /.*morbius.*/,
+                    /.*shriek.*/,
+                    /.*lizard.*/,
+                    /.*luke.*carlyl.*/,
+                    /.*MadBomber.*/,
                 ],
                 outOf: 2,
             },
@@ -92,7 +95,7 @@
             {
                 prompt: "In \"Oddworld: Abe's Oddysee\", Abe is a factory worker and employee of the year at \"Rupture Farms\". What does Abe learn during the opening cutscene that causes him to try to escape the factory?",
                 answer: "He learns that his species is to be turned into food to save the company from falling profits.",
-                matcher: /(food|eat|(kill.*(species|his people))|((species|his people).*kill))/
+                matcher: /.*(food|eat|(kill.*(species|his people))|((species|his people).*kill)).*/
             },
             {
                 prompt: "In \"Sonic Heroes\", who is the mysterious client who \"Team Chaotix\" rescue from Dr. Eggman's Sky Base?",
@@ -134,7 +137,8 @@
             },
             {
                 prompt: "What is the name of the Diablo mobile game announced in 2018?",
-                answer: "Diablo: Immortal"
+                answer: "Diablo: Immortal",
+                matcher: /.*immortal.*/,
             },
             {
                 prompt: "With the release of Pokémon Sun & Moon in 2016, which Pokémon no longer has the ability to levitate?",
@@ -191,7 +195,7 @@
             {
                 picture: "media/2018/picture/5.png",
                 answer: "Team Fortress 2",
-                matcher: /team\s*fortress\s*(2|two)/
+                matcher: /t(eam)?\s*f(ortress)?\s*(2|two)/
             },
             {
                 picture: "media/2018/picture/6.png",
@@ -204,12 +208,12 @@
             {
                 picture: "media/2018/picture/8.png",
                 answer: "Space Impact",
-                half: /.*(space).*/,
+                half: /.*(space|impact).*/,
             },
             {
                 picture: "media/2018/picture/9.png",
                 answer: "Hyper Light Drifter",
-                matcher: /Hyper\s*Light\s*Drifter/
+                matcher: /hyper\s*light\s*drifter/
             },
             {
                 picture: "media/2018/picture/10.png",
@@ -225,7 +229,7 @@
             {
                 picture: "media/2018/picture/Bonus 2.png",
                 answer: "Player Unknown's: Battlegrounds",
-                half: /.*(PUBG|battlegrounds?)/,
+                matcher: /.*(pubg|battlegrounds?)/,
             },
             {
                 picture: "media/2018/picture/Bonus 3.png",
