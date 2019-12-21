@@ -3,10 +3,6 @@
     import Quiz from "../framework/Quiz.svelte";
 </script>
 
-<style>
-
-</style>
-
 <Quiz>
     <Round
         name="The Knowledge Round"
