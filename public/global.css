@@ -1,5 +1,6 @@
 :root {
 	--background: #333;
+	--purple: #c9f;
 }
 
 * {
@@ -7,7 +8,7 @@
 }
 
 *::selection {
-	background: #95f;
+	background: var(--purple);
 }
 
 *:focus {
@@ -74,6 +75,11 @@ button {
 
 button:disabled {
 	color: #777;
+}
+
+button:focus {
+	border-color: var(--purple);
+	box-shadow: var(--purple) 0 0 4px;
 }
 
 button:not(:disabled):active {
