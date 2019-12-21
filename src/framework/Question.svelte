@@ -34,6 +34,10 @@
 </script>
 
 <style>
+    div {
+        margin-top: 0.5rem;
+    }
+
     div.single-line {
         align-items: flex-start;
         display: flex;
@@ -42,7 +46,7 @@
     input {
         display: block;
         flex-grow: 1;
-        margin: 0.5rem 0 0 0;
+        margin: 0;
         width: 100%;
     }
 
