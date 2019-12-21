@@ -7,7 +7,7 @@ import { terser } from 'rollup-plugin-terser';
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-	input: ['src/quiz2018.js'],
+	input: ['src/quizzes/quiz2018.js'],
 	output: {
 		sourcemap: true,
 		format: 'iife',

@@ -1,6 +1,6 @@
 <script>
-    import Round from "./framework/Round.svelte";
-    import Quiz from "./framework/Quiz.svelte";
+    import Round from "../framework/Round.svelte";
+    import Quiz from "../framework/Quiz.svelte";
 </script>
 
 <style>
