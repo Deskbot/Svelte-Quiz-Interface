@@ -18,9 +18,18 @@
     }
 </script>
 
-{#if caveat !== undefined}
-    <span>{caveat}</span>
-{/if}
+<style>
+    audio {
+        margin-bottom: 0.5rem;
+        vertical-align: top;
+        width: 100%;
+    }
+
+    span {
+        display: inline-block;
+    }
+</style>
+
 <audio
     controls
     on:play={stopOthers}
@@ -28,3 +37,6 @@
     bind:paused
     bind:this={audio}
 />
+{#if caveat !== undefined}
+    <span>{caveat}</span>
+{/if}

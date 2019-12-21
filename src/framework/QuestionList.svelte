@@ -3,6 +3,7 @@
     import PicturePrompt from "./format/PicturePrompt.svelte";
     import PictureQuestionListItem from "./format/PictureQuestionListItem.svelte";
     import Question from "./Question.svelte";
+    import TextPrompt from "./format/TextPrompt.svelte";
     import TextQuestionListItem from "./format/TextQuestionListItem.svelte";
 
     export let format;
@@ -74,7 +75,7 @@
                     {reveal}
                     bind:score={questionScores[qNum]}
                 >
-                    <p>{question.prompt}</p>
+                    <TextPrompt text={question.prompt}/>
                 </Question>
             </TextQuestionListItem>
     {/each}

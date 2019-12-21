@@ -1,7 +1,6 @@
 MVP
 ---
 
-* improve CSS for audio questions
 * use reset css
 * update README
 * read everything to check for spag
