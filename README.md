@@ -1,5 +1,5 @@
-Game Quizzes
-============
+Svelte Quiz Interface
+=====================
 
 This is a simple quiz website written in Svelte.
 
