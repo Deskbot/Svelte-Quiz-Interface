@@ -23,10 +23,6 @@
                 matcher: /rh?ythm(is)?(just)?(a)?clickaway/
             },
             {
-                prompt: "What is the symbol on Waluigi's Cap. TODO implement multiple choice",
-                answer: "",
-            },
-            {
                 prompt: "What is the name of the FIFA game released in 2017?",
 	            answer: "FIFA 18",
                 matcher: /fifa(20|twenty-?)?(18|eighteen)/,
