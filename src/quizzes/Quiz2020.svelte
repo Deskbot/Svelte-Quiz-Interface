@@ -5,54 +5,66 @@
 
 <Quiz>
     <Round
-        name="The Knowledge Round"
+        name="Video Games Round"
         format="text"
         questions={[
             {
-                prompt: "\"Card Wars\" is a digital card game originating from which children's TV programme?",
-                answer: "Adventure Time",
+                prompt: "How many columns are there in the well in \"Tetris\"?",
+                answer: 10,
             },
             {
-                prompt: "Forza Horizon 4, released in 2018, is set in which country?",
-                answer: "Great Britain",
-                matcher: /(great)?britain|gb|(the)?unitedkingdom|uk/
+                prompt: "In which series would you find the following characters: Burst Man, Clown Man, Flash Man, Origami Man?",
+                answer: "Mega Man",
+                matcher: /mega.?man/
             },
             {
-                prompt: "In which game(s) might you find an \"Aku Aku\" mask?",
-                answer: "Crash Bandicoot",
-                matcher: /crash.*/
+                prompt: "What is the tagline of the rhythm game \"Osu!\"?",
+                answer: "Rhythm is just a click away!",
+                matcher: /rhythm is (just)? a click away/
             },
             {
-                prompt: "What is the real full name of \"Tails the Fox\", from the Sonic franchise.",
-                answer: "Miles Prower",
-                matcher: /miles.*prower/
+                prompt: "What is the symbol on Waluigi's Cap. TODO implement multiple choice",
+                answer: "",
             },
             {
-                prompt: "Helix, Ribbon Girl, and Master Mummy are characters from which game(s)?",
-	            answer: "Arms"
+                prompt: "What is the name of the FIFA game released in 2017?",
+	            answer: "FIFA 18",
+                matcher: /fifa *(20|twenty-?)?(18|eighteen)/,
             },
             {
-                prompt: "Which is the only Dark Souls character to have an Amiibo?",
-                answer: "Solaire of Astora",
-                matcher: /solaire.*/
+                prompt: "Hw many buttons is the fighting game \"Dive Kick\" played with?",
+                answer: 2,
             },
             {
-                prompt: "What is the name of the international pharmaceutical corporation in the Resident Evil series?",
-                answer: "Umbrella Corporation",
-                matcher: /umbrella.*/
+                prompt: "What is the name of the race of cat people in The Elder Scrolls series?",
+                answer: "Khajiit",
+                matcher: /(kh?|c)a+ji+t/
             },
             {
-                prompt: "What is the title of the game AM2R short for?",
-                answer: "Another Metroid 2 Remake",
-                matcher: /anothermetroid(2|two)remake/,
+                prompt: "The game \"A Dark Room\" was removed from the Nintendo Switch eShop after it was revealed to have a hidden feature that was only accessible with a keyboard. What was that hidden feature?",
+                answer: "Pressing the tilde key opened a Ruby code editor and runner.",
+                matcher: /.*(code|program).*(editor|environment|\bide\b).*/,
             },
             {
-                prompt: "What is the name of Master Chief's AI Companion?",
-                answer: "Cortana",
+                prompt: "Which real world car manufacturer has sponsored vehicles in Mario Kart 8?",
+                answer: "Mercedes",
             },
             {
-                prompt: "In The Legend of Zelda: Twilight Princess, what is the name of the Twilight Princess?",
-                answer: "Midna",
+                prompt: "What is the name of the 2011 pigeon dating simulator game?",
+                answer: "Hatoful Boyfriend",
+            },
+            {
+                prompt: "What is the name of the 1994 fighting game featuring basketball player Shaquille O'Neal?",
+                answer: "Shaq Fu",
+                trivia: "Plot summary: Shaquille O'Neal walks into a dojo while heading to a charity basketball game in Tokyo, Japan. After speaking with Leotsu, a martial arts master, Shaq goes to another dimension, the Second World, where he must rescue a young boy named Nezu from the evil mummy Sett Ra."
+            },
+            {
+                prompt: "P.T. is the demo for cancelled horror game. Which series was that game to be a part of?",
+                answer: "Silent Hill",
+            },
+            {
+                prompt: "What is the name of Valve's virtual reality headset?",
+                answer: "Index",
             },
         ]}
     />
@@ -61,111 +73,39 @@
         format="text"
         questions={[
             {
-                prompt: "In \"Cel Damage\" (and its re-releases under slightly different titles), there are several whacky playable characters including a devil called \"Sinder\", a T-Rex called \"T. Wrecks\", and an eastern European dominatrix. Name that dominatrix!",
-                answer: "Dominique Trix",
-                half: /dominique|trix/
+                prompt: "In the classic edition of \"Cluedo\", what is the name of the murder victim?",
+                answer: ["Dr. Black", "Mr. Body"],
             },
             {
-                prompt: "In \"Spiderman 3\" for the PS2, PSP, and Wii there are several super villains, however some of these villains did not appear in the movie the game was based on. Name two of those villains! For 2 points.",
-                answer: [
-                    "Morbius",
-                    "Shriek",
-                    "The Lizard",
-                    "Luke Carlyl",
-                    "The Mad Bomber Group",
-                ],
-                matcher: [
-                    /.*morbius.*/,
-                    /.*shriek.*/,
-                    /.*lizard.*/,
-                    /.*luke.*carlyl.*/,
-                    /.*MadBomber.*/,
-                ],
-                outOf: 2,
+                prompt: "In Scrabble, how many points total are the letters in the word \"Scrabble\" worth?",
+                answer: "14",
+                half: /13|15/,
             },
             {
-                prompt: "In \"Ben 10: Protector of the Earth\" how many of Ben's aliens are actually playable?",
-                answer: 5,
+                prompt: "In Chess, on the first player's first turn, how many different choices of move are there?",
+                answer: 20,
             },
             {
-                prompt: "In \"Tom and Jerry: War of the Whiskers\" if you knock out your opponent without taking any damage, what word appears on the screen?",
-                answer: "Purrfect",
-                half: "Perfect"
+                prompt: "What are the wooden character pieces in Carcassone called?",
+                answer: "Meeple",
+                matcher: /meeples?/,
             },
             {
-                prompt: "In \"Oddworld: Abe's Oddysee\", Abe is a factory worker and employee of the year at \"Rupture Farms\". What does Abe learn during the opening cutscene that causes him to try to escape the factory?",
-                answer: "He learns that his species is to be turned into food to save the company from falling profits.",
-                matcher: /.*(food|eat|(kill.*(species|his people))|((species|his people).*kill)).*/
+                prompt: "In the playing card game Hearts, how is it determined which player goes first?",
+                answer: "The player who has the 2 of clubs goes first.",
+                matcher: /.*(two|2).*clubs?.*/
             },
             {
-                prompt: "In \"Sonic Heroes\", who is the mysterious client who \"Team Chaotix\" rescue from Dr. Eggman's Sky Base?",
-                answer: "Dr. Eggman / Dr. Robotnik",
-                matcher: /.*(eggman|robotnik).*/
+                prompt: "In \"Operation\", which ailment does the pail of water represent?",
+                answer: ["Water on the Knee", "Knee Effusion"],
             },
             {
-                prompt: "Introduced to the series in \"Tekken 3\", Eddy Gordo uses which style of martial arts?",
-                answer: "Capoeira",
-                matcher: /[ck]apo[aeiou]+ra/
+                prompt: "Who designed \"Settlers of Catan\"?",
+                answer: "Klaus Teuber",
             },
             {
-                prompt: "In \"The Simpsons: Hit & Run\" there are many blue crates situated about the overworld that give you money when destroyed. What is written on each of the blue crates?",
-                answer: "Buzz Cola",
-            },
-            {
-                prompt: "In \"Mario Kart DS\", which track is made in the shape of a character from the series?",
-                answer: "Yoshi Circuit",
-                half: "Yoshi"
-            },
-            {
-                prompt: "What is the name of the doctor featured in the \"Brain Training\" series for the Nintendo DS? Maximum of half a mark for bad spelling.",
-                answer: "Dr. Kawashima",
-                matcher: /kaw[ao]sh[ie]ma/
-            }
-        ]}
-    />
-    <Round
-        name={"Design and Development Round"}
-        format="text"
-        questions={[
-            {
-                prompt: "What game, announced at E3 2016, was Hideo Kojima directing?",
-                answer: "Death Stranding",
-            },
-            {
-                prompt: "How many different official \"Harry Potter and the Chamber of Secrets\" video games were developed?",
-                answer: 5,
-            },
-            {
-                prompt: "What is the name of the Diablo mobile game announced in 2018?",
-                answer: "Diablo: Immortal",
-                matcher: /.*immortal.*/,
-            },
-            {
-                prompt: "With the release of Pokémon Sun & Moon in 2016, which Pokémon no longer has the ability to levitate?",
-                answer: "Gengar"
-            },
-            {
-                prompt: "What is the name of the first scrapped CD-ROM add-on for the SNES?",
-                answer: ["Playstation", "SNES-CD"]
-            },
-            {
-                prompt: "Who engineered the first prototype of Breakout?",
-                answer: "Steve Wozniak"
-            },
-            {
-                prompt: "Who designed the Game of Life?",
-                answer: "John Horton Conway",
-                matcher: /joh?n.*conway/,
-                half: /.*joh?n|conway.*/,
-            },
-            {
-                prompt: "What is the name of the mythical arcade game that according to urban legend was part of a covert psychology experiment by the US government?",
-                answer: "Polybius"
-            },
-            {
-                prompt: "What is the name of Fortnite's co-op zombie survival game mode?",
-                answer: "Fortnite: Save the World",
-                matcher: /.*save.*world.*/,
+                prompt: "Which country does \"Go\" originate from?",
+                answer: "China",
             }
         ]}
     />
@@ -175,75 +115,70 @@
         format="picture"
         questions={[
             {
-                picture: "media/2018/picture/1.png",
-                answer: "Grim Fandango",
-                half: /.*(grim|fandango).*/,
+                picture: "media/2020/picture/1.png",
+                answer: "Astral Chain",
+                half: /.*(astral|chain).*/,
             },
             {
-                picture: "media/2018/picture/2.png",
-                answer: "Hollow Knight",
-                half: /.*(hollow|knight).*/,
+                picture: "media/2020/picture/2.png",
+                answer: "QBert",
+                matcher: /q.*bert/,
             },
             {
-                picture: "media/2018/picture/3.png",
-                answer: "Overwatch",
+                picture: "media/2020/picture/3.png",
+                answer: "Minimetro",
             },
             {
-                picture: "media/2018/picture/4.png",
-                answer: "Limbo",
+                picture: "media/2020/picture/4.png",
+                answer: "Little Town Hero",
             },
             {
-                picture: "media/2018/picture/5.png",
-                answer: "Team Fortress 2",
-                matcher: /t(eam)?\s*f(ortress)?\s*(2|two)/
+                picture: "media/2020/picture/5.png",
+                answer: "Gorogoa",
             },
             {
-                picture: "media/2018/picture/6.png",
-                answer: "Zuma",
+                picture: "media/2020/picture/6.png",
+                answer: ["Pokémon Shield", "Pokémon Sword"],
+                matcher: /pok(e|é)mon(sword|shield)/,
             },
             {
-                picture: "media/2018/picture/7.png",
-                answer: "Pacman",
+                picture: "media/2020/picture/7.png",
+                answer: "Half-life",
             },
             {
-                picture: "media/2018/picture/8.png",
-                answer: "Space Impact",
-                half: /.*(space|impact).*/,
+                picture: "media/2020/picture/8.png",
+                answer: "Return of the Obra Dinn",
+                half: /.*(return|obra|dinn).*/,
             },
             {
-                picture: "media/2018/picture/9.png",
-                answer: "Hyper Light Drifter",
-                matcher: /hyper\s*light\s*drifter/
+                picture: "media/2020/picture/9.png",
+                answer: "No Man's Sky",
             },
             {
-                picture: "media/2018/picture/10.png",
-                answer: "Portal 2",
-                matcher: /portal\s*(2|two)/,
-                half: /.*(portal).*/,
+                picture: "media/2020/picture/10.png",
+                answer: "Outer Worlds",
             },
             {
-                picture: "media/2018/picture/Bonus 1.png",
-                answer: "Super Smash Brothers Ultimate",
-                matcher: /.*smash.*ultimate/,
+                picture: "media/2020/picture/Bonus 1.png",
+                answer: "Ori and the Blind Forest",
+                half: /.*(ori|blind forest).*/,
             },
             {
-                picture: "media/2018/picture/Bonus 2.png",
-                answer: "Player Unknown's: Battlegrounds",
-                matcher: /.*(pubg|battlegrounds?)/,
+                picture: "media/2020/picture/Bonus 2.png",
+                answer: "Roblox",
             },
             {
-                picture: "media/2018/picture/Bonus 3.png",
-                answer: "Cuphead",
+                picture: "media/2020/picture/Bonus 3.png",
+                answer: "Ōkami",
+                matcher: /(o|ō)kami/,
             },
             {
-                picture: "media/2018/picture/Bonus 4.png",
-                answer: "Tetris",
+                picture: "media/2020/picture/Bonus 4.png",
+                answer: "Sunset Overdrive",
             },
             {
-                picture: "media/2018/picture/Bonus 5.png",
-                answer: "Mario Kart 8 Deluxe",
-                matcher: /mario\s*[ck]art\s*(8|eight)\s*deluxe/,
-                half: /mario\s*[ck]art\s*(8|eight)\s*/,
+                picture: "media/2020/picture/Bonus 5.png",
+                answer: "Doom",
             }
         ]}
     />
@@ -253,48 +188,98 @@
         explanation="For each music clip, name the game that music comes from."
         questions={[
             {
-                audio: "media/2018/audio/1.wav",
-                answer: "Papers Please",
+                audio: "media/2020/audio/1.wav",
+                answer: "Downwell",
             },
             {
-                audio: "media/2018/audio/2.wav",
-                answer: "Super Metroid",
-                matcher: /.*metroid.*/
+                audio: "media/2020/audio/2.wav",
+                answer: "Dark Souls",
             },
             {
-                audio: "media/2018/audio/3.wav",
-                answer: "Toki Tori 2",
-                matcher: /toki\s*tori\s*(2|two)/,
+                audio: "media/2020/audio/3.wav",
+                answer: "Wii Sports",
             },
             {
-                audio: "media/2018/audio/4.wav",
+                audio: "media/2020/audio/4.wav",
+                answer: "Axiom Verge",
+            },
+            {
+                audio: "media/2020/audio/5.wav",
+                answer: "Portal",
+            },
+            {
+                audio: "media/2020/audio/6.wav",
+                answer: "Cadence of Hyrule",
+            },
+            {
+                audio: "media/2020/audio/7.wav",
+                answer: "Fortnite",
+            },
+            {
+                audio: "media/2020/audio/8.wav",
+                answer: ["Shadow the Hedgehog", "Sonic the Hedgehog (2006)", "Sonic and the Black Knight", "Sonic Generations"],
+                matcher: /.*(shadow the hedgehog|sonic the hedgehog|sonic ?06|sonic (and|&) the black knight|sonic generations).*/,
+            },
+            {
+                audio: "media/2020/audio/9.wav",
+                answer: "Baba is You",
+            },
+            {
+                audio: "media/2020/audio/10.wav",
+                answer: "Kinect Star Wars",
+                matcher: /kinect star wars|star wars kinect/
+            },
+        ]}
+    />
+    <Round
+        name="Who's Voiceline is it Anyway?"
+        format="audio"
+        explanation="For each voice clip, name the character making that noise."
+        questions={[
+            {
+                audio: "media/2020/voicelines/1.wav",
+                answer: "Sans",
+            },
+            {
+                audio: "media/2020/voicelines/2.wav",
+                answer: "Big the Cat",
+            },
+            {
+                audio: "media/2020/voicelines/3.wav",
+                answer: "Ragnaros the Fire Lord",
+                matcher: /ragnaros.*/,
+            },
+            {
+                audio: "media/2020/voicelines/4.wav",
+                answer: "Marge Simpson",
+            },
+            {
+                audio: "media/2020/voicelines/5.wav",
+                answer: "The Heavy",
+                matcher: /.*heavy.*/
+            },
+            {
+                audio: "media/2020/voicelines/6.wav",
+                answer: "Cornifer",
+            },
+            {
+                audio: "media/2020/voicelines/7.wav",
+                answer: "Doomfist",
+            },
+            {
+                audio: "media/2020/voicelines/8.wav",
                 answer: "Bayonetta",
             },
             {
-                audio: "media/2018/audio/5.wav",
-                answer: "God of War",
+                audio: "media/2020/voicelines/9.wav",
+                answer: "Enderman",
             },
             {
-                audio: "media/2018/audio/6.wav",
-                answer: "Shovel Knight",
-            },
-            {
-                audio: "media/2018/audio/7.wav",
-                answer: ["Luigi's Mansion", "Totaka's Song"],
-                caveat: "You can also earn an extra point for giving the name of the tune.",
+                audio: "media/2020/voicelines/10.wav",
+                answer: ["Ethan Mars", "Heavy Rain"],
+                caveat: "You can also earn an extra point for giving the name of the game this character is from.",
+                matcher: /kinect star wars|star wars kinect/,
                 outOf: 2,
-            },
-            {
-                audio: "media/2018/audio/8.wav",
-                answer: "Sonic Heroes",
-            },
-            {
-                audio: "media/2018/audio/9.wav",
-                answer: "Undertale",
-            },
-            {
-                audio: "media/2018/audio/10.wav",
-                answer: "Octopath Traveller",
             },
         ]}
     />
