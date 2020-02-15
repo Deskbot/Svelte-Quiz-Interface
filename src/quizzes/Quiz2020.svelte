@@ -20,7 +20,7 @@
             {
                 prompt: "What is the tagline of the rhythm game \"Osu!\"?",
                 answer: "Rhythm is just a click away!",
-                matcher: /rhythm is (just)? a click away/
+                matcher: /rh?ythm(is)?(just)?(a)?clickaway/
             },
             {
                 prompt: "What is the symbol on Waluigi's Cap. TODO implement multiple choice",
@@ -29,7 +29,7 @@
             {
                 prompt: "What is the name of the FIFA game released in 2017?",
 	            answer: "FIFA 18",
-                matcher: /fifa *(20|twenty-?)?(18|eighteen)/,
+                matcher: /fifa(20|twenty-?)?(18|eighteen)/,
             },
             {
                 prompt: "Hw many buttons is the fighting game \"Dive Kick\" played with?",
@@ -161,7 +161,7 @@
             {
                 picture: "media/2020/picture/B1.png",
                 answer: "Ori and the Blind Forest",
-                half: /.*(ori|blind forest).*/,
+                half: /.*(ori|blindforest).*/,
             },
             {
                 picture: "media/2020/picture/B2.png",
@@ -218,7 +218,7 @@
             {
                 audio: "media/2020/music/8.mp3",
                 answer: ["Shadow the Hedgehog", "Sonic the Hedgehog (2006)", "Sonic and the Black Knight", "Sonic Generations"],
-                matcher: /.*(shadow the hedgehog|sonic the hedgehog|sonic ?06|sonic (and|&) the black knight|sonic generations).*/,
+                matcher: /.*(shadowthehedgehog|sonicthehedgehog|sonic06|sonic(and|&)(the)?blackknight|sonicgenerations).*/,
             },
             {
                 audio: "media/2020/music/9.mp3",
@@ -227,7 +227,7 @@
             {
                 audio: "media/2020/music/10.mp3",
                 answer: "Kinect Star Wars",
-                matcher: /kinect star wars|star wars kinect/
+                matcher: /kinectstarwars|starwarskinect/
             },
         ]}
     />
@@ -278,7 +278,6 @@
                 audio: "media/2020/voicelines/10.mp3",
                 answer: ["Ethan Mars", "Heavy Rain"],
                 caveat: "You can also earn an extra point for giving the name of the game this character is from.",
-                matcher: /kinect star wars|star wars kinect/,
                 outOf: 2,
             },
         ]}
