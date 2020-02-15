@@ -9,7 +9,10 @@
 	<link rel="stylesheet" href="global.css">
 	<link rel="stylesheet" href="build/bundle.css">
 
-	<script defer src="build/bundle.js"></script>
+	<script defer type="module">
+		import { startQuiz2018 } from "./build/quiz2018.js";
+		startQuiz2018();
+	</script>
 </head>
 
 <body>
