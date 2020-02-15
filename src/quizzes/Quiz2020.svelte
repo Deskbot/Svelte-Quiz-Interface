@@ -188,44 +188,44 @@
         explanation="For each music clip, name the game that music comes from."
         questions={[
             {
-                audio: "media/2020/music/1.wav",
+                audio: "media/2020/music/1.mp3",
                 answer: "Downwell",
             },
             {
-                audio: "media/2020/music/2.wav",
+                audio: "media/2020/music/2.mp3",
                 answer: "Dark Souls",
             },
             {
-                audio: "media/2020/music/3.wav",
+                audio: "media/2020/music/3.mp3",
                 answer: "Wii Sports",
             },
             {
-                audio: "media/2020/music/4.wav",
+                audio: "media/2020/music/4.mp3",
                 answer: "Axiom Verge",
             },
             {
-                audio: "media/2020/music/5.wav",
+                audio: "media/2020/music/5.mp3",
                 answer: "Portal",
             },
             {
-                audio: "media/2020/music/6.wav",
+                audio: "media/2020/music/6.mp3",
                 answer: "Cadence of Hyrule",
             },
             {
-                audio: "media/2020/music/7.wav",
+                audio: "media/2020/music/7.mp3",
                 answer: "Fortnite",
             },
             {
-                audio: "media/2020/music/8.wav",
+                audio: "media/2020/music/8.mp3",
                 answer: ["Shadow the Hedgehog", "Sonic the Hedgehog (2006)", "Sonic and the Black Knight", "Sonic Generations"],
                 matcher: /.*(shadow the hedgehog|sonic the hedgehog|sonic ?06|sonic (and|&) the black knight|sonic generations).*/,
             },
             {
-                audio: "media/2020/music/9.wav",
+                audio: "media/2020/music/9.mp3",
                 answer: "Baba is You",
             },
             {
-                audio: "media/2020/music/10.wav",
+                audio: "media/2020/music/10.mp3",
                 answer: "Kinect Star Wars",
                 matcher: /kinect star wars|star wars kinect/
             },
@@ -237,45 +237,45 @@
         explanation="For each voice clip, name the character making that noise."
         questions={[
             {
-                audio: "media/2020/voicelines/1.wav",
+                audio: "media/2020/voicelines/1.mp3",
                 answer: "Sans",
             },
             {
-                audio: "media/2020/voicelines/2.wav",
+                audio: "media/2020/voicelines/2.mp3",
                 answer: "Big the Cat",
             },
             {
-                audio: "media/2020/voicelines/3.wav",
+                audio: "media/2020/voicelines/3.mp3",
                 answer: "Ragnaros the Fire Lord",
                 matcher: /ragnaros.*/,
             },
             {
-                audio: "media/2020/voicelines/4.wav",
+                audio: "media/2020/voicelines/4.mp3",
                 answer: "Marge Simpson",
             },
             {
-                audio: "media/2020/voicelines/5.wav",
+                audio: "media/2020/voicelines/5.mp3",
                 answer: "The Heavy",
                 matcher: /.*heavy.*/
             },
             {
-                audio: "media/2020/voicelines/6.wav",
+                audio: "media/2020/voicelines/6.mp3",
                 answer: "Cornifer",
             },
             {
-                audio: "media/2020/voicelines/7.wav",
+                audio: "media/2020/voicelines/7.mp3",
                 answer: "Doomfist",
             },
             {
-                audio: "media/2020/voicelines/8.wav",
+                audio: "media/2020/voicelines/8.mp3",
                 answer: "Bayonetta",
             },
             {
-                audio: "media/2020/voicelines/9.wav",
+                audio: "media/2020/voicelines/9.mp3",
                 answer: "Enderman",
             },
             {
-                audio: "media/2020/voicelines/10.wav",
+                audio: "media/2020/voicelines/10.mp3",
                 answer: ["Ethan Mars", "Heavy Rain"],
                 caveat: "You can also earn an extra point for giving the name of the game this character is from.",
                 matcher: /kinect star wars|star wars kinect/,
