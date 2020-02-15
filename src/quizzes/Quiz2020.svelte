@@ -28,7 +28,7 @@
                 matcher: /fifa(20|twenty-?)?(18|eighteen)/,
             },
             {
-                prompt: "Hw many buttons is the fighting game \"Dive Kick\" played with?",
+                prompt: "How many buttons is the fighting game \"Dive Kick\" played with?",
                 answer: 2,
             },
             {
@@ -39,7 +39,7 @@
             {
                 prompt: "The game \"A Dark Room\" was removed from the Nintendo Switch eShop after it was revealed to have a hidden feature that was only accessible with a keyboard. What was that hidden feature?",
                 answer: "Pressing the tilde key opened a Ruby code editor and runner.",
-                matcher: /.*(code|program).*(editor|environment|\bide\b).*/,
+                matcher: /.*(code|coding|program).*(editor|environment|\bide\b).*/,
             },
             {
                 prompt: "Which real world car manufacturer has sponsored vehicles in Mario Kart 8?",
@@ -71,6 +71,10 @@
             {
                 prompt: "In the classic edition of \"Cluedo\", what is the name of the murder victim?",
                 answer: ["Dr. Black", "Mr. Body"],
+                matcher: [
+                    /drblack/,
+                    /mrbodd?y/,
+                ],
             },
             {
                 prompt: "In Scrabble, how many points total are the letters in the word \"Scrabble\" worth?",
@@ -82,7 +86,7 @@
                 answer: 20,
             },
             {
-                prompt: "What are the wooden character pieces in Carcassone called?",
+                prompt: "What are the wooden player pieces in Carcassone called?",
                 answer: "Meeple",
                 matcher: /meeples?/,
             },
@@ -98,6 +102,7 @@
             {
                 prompt: "Who designed \"Settlers of Catan\"?",
                 answer: "Klaus Teuber",
+                matcher: /kla[aeuo]st[eou]{2}ber/,
             },
             {
                 prompt: "Which country does \"Go\" originate from?",
@@ -127,6 +132,7 @@
             {
                 picture: "media/2020/picture/4.png",
                 answer: "Little Town Hero",
+                half: /town/,
             },
             {
                 picture: "media/2020/picture/5.png",
@@ -135,7 +141,7 @@
             {
                 picture: "media/2020/picture/6.png",
                 answer: ["Pokémon Shield", "Pokémon Sword"],
-                matcher: /pok(e|é)mon(sword|shield)/,
+                matcher: /pok(e|é)mon(sword|shield).*/,
             },
             {
                 picture: "media/2020/picture/7.png",
@@ -144,6 +150,7 @@
             {
                 picture: "media/2020/picture/8.png",
                 answer: "Return of the Obra Dinn",
+                matcher: /obra.*dinn/,
                 half: /.*(return|obra|dinn).*/,
             },
             {
@@ -214,7 +221,13 @@
             {
                 audio: "media/2020/music/8.mp3",
                 answer: ["Shadow the Hedgehog", "Sonic the Hedgehog (2006)", "Sonic and the Black Knight", "Sonic Generations"],
-                matcher: /.*(shadowthehedgehog|sonicthehedgehog|sonic06|sonic(and|&)(the)?blackknight|sonicgenerations).*/,
+                matcher: [
+                    /shadowthehedgehog/,
+                    /sonicthehedgehog/,
+                    /sonic(20)?06/,
+                    /sonic(and|&)(the)?blackknight/,
+                    /sonicgenerations/,
+                ],
             },
             {
                 audio: "media/2020/music/9.mp3",
@@ -239,6 +252,7 @@
             {
                 audio: "media/2020/voicelines/2.mp3",
                 answer: "Big the Cat",
+                matcher: /big/,
             },
             {
                 audio: "media/2020/voicelines/3.mp3",
@@ -248,6 +262,7 @@
             {
                 audio: "media/2020/voicelines/4.mp3",
                 answer: "Marge Simpson",
+                matcher: /marge/,
             },
             {
                 audio: "media/2020/voicelines/5.mp3",

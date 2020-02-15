@@ -26,7 +26,11 @@ export function mark(question, guess, outOf) {
 
 function countCorrect(question, guess) {
     if (question.matcher) {
-        return countIf(question.matcher, possibleMatch => matcherMatches(possibleMatch, guess));
+        if (Array.isArray(question.matcher)) {
+            return countIf(question.matcher, possibleMatch => matcherMatches(possibleMatch, guess));
+        } else {
+            return matcherMatches(question.matcher, guess) ? 1 : -1;
+        }
     } else {
         return countIf(question.answer, possibleAns => isAnswer(possibleAns, guess));
     }
