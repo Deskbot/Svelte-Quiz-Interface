@@ -2,19 +2,26 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
+// import multi from '@rollup/plugin-multi-entry';
 import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-	input: ['src/quizzes/quiz2018.js'],
+	input: [
+		'src/quizzes/quiz2018.js',
+		'src/quizzes/quiz2020.js',
+	],
 	output: {
 		sourcemap: true,
-		format: 'iife',
+		format: 'es',
 		name: 'GameQuiz',
-		file: 'public/build/bundle.js'
+		dir: 'public/build'
 	},
+	// experimentalCodeSplitting: true,
+	// experimentalDynamicImport: true,
 	plugins: [
+		// multi(),
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,
