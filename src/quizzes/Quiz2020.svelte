@@ -159,25 +159,25 @@
                 answer: "Outer Worlds",
             },
             {
-                picture: "media/2020/picture/Bonus 1.png",
+                picture: "media/2020/picture/B1.png",
                 answer: "Ori and the Blind Forest",
                 half: /.*(ori|blind forest).*/,
             },
             {
-                picture: "media/2020/picture/Bonus 2.png",
+                picture: "media/2020/picture/B2.png",
                 answer: "Roblox",
             },
             {
-                picture: "media/2020/picture/Bonus 3.png",
+                picture: "media/2020/picture/B3.png",
                 answer: "Ōkami",
                 matcher: /(o|ō)kami/,
             },
             {
-                picture: "media/2020/picture/Bonus 4.png",
+                picture: "media/2020/picture/B4.png",
                 answer: "Sunset Overdrive",
             },
             {
-                picture: "media/2020/picture/Bonus 5.png",
+                picture: "media/2020/picture/B5.png",
                 answer: "Doom",
             }
         ]}
@@ -188,44 +188,44 @@
         explanation="For each music clip, name the game that music comes from."
         questions={[
             {
-                audio: "media/2020/audio/1.wav",
+                audio: "media/2020/music/1.wav",
                 answer: "Downwell",
             },
             {
-                audio: "media/2020/audio/2.wav",
+                audio: "media/2020/music/2.wav",
                 answer: "Dark Souls",
             },
             {
-                audio: "media/2020/audio/3.wav",
+                audio: "media/2020/music/3.wav",
                 answer: "Wii Sports",
             },
             {
-                audio: "media/2020/audio/4.wav",
+                audio: "media/2020/music/4.wav",
                 answer: "Axiom Verge",
             },
             {
-                audio: "media/2020/audio/5.wav",
+                audio: "media/2020/music/5.wav",
                 answer: "Portal",
             },
             {
-                audio: "media/2020/audio/6.wav",
+                audio: "media/2020/music/6.wav",
                 answer: "Cadence of Hyrule",
             },
             {
-                audio: "media/2020/audio/7.wav",
+                audio: "media/2020/music/7.wav",
                 answer: "Fortnite",
             },
             {
-                audio: "media/2020/audio/8.wav",
+                audio: "media/2020/music/8.wav",
                 answer: ["Shadow the Hedgehog", "Sonic the Hedgehog (2006)", "Sonic and the Black Knight", "Sonic Generations"],
                 matcher: /.*(shadow the hedgehog|sonic the hedgehog|sonic ?06|sonic (and|&) the black knight|sonic generations).*/,
             },
             {
-                audio: "media/2020/audio/9.wav",
+                audio: "media/2020/music/9.wav",
                 answer: "Baba is You",
             },
             {
-                audio: "media/2020/audio/10.wav",
+                audio: "media/2020/music/10.wav",
                 answer: "Kinect Star Wars",
                 matcher: /kinect star wars|star wars kinect/
             },
