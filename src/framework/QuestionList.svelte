@@ -18,16 +18,19 @@
 
 <style>
     ol {
-        align-items: flex-start;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-content: space-between;
-        align-items: stretch;
         margin: 0 0 1rem 0;
     }
 
+    ol.audio {
+        align-content: space-between;
+        align-items: stretch;
+    }
+
     ol.picture {
+        align-items: baseline;
         margin: 0;
     }
 </style>
@@ -52,7 +55,7 @@
         {/each}
     </ol>
 {:else if format === "audio"}
-    <ol>
+    <ol class="audio">
         {#each questions as question, qNum}
             <PictureQuestionListItem>
                 <Question
