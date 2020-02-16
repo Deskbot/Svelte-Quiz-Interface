@@ -25,7 +25,6 @@
     }
 
     ol.audio {
-        align-content: space-between;
         align-items: stretch;
     }
 
