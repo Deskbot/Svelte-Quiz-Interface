@@ -102,6 +102,7 @@
             {
                 prompt: "Who designed \"Settlers of Catan\"?",
                 answer: "Klaus Teuber",
+                half: /kla[aeuo]s|t[eou]{2}ber/,
                 matcher: /kla[aeuo]st[eou]{2}ber/,
             },
             {
