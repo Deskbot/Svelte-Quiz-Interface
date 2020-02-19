@@ -64,7 +64,6 @@
         display: flex;
         flex-direction: column;
         flex-grow: 0;
-        height: 1rem;
         justify-content: center;
         margin: 1rem 0 0 0;
         vertical-align: middle;
