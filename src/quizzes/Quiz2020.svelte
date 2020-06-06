@@ -65,7 +65,7 @@
         ]}
     />
     <Round
-        name="Games from Thomas's Childhood Round"
+        name="I Don't Know Any More Things About Video Games Round"
         format="text"
         questions={[
             {
