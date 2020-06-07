@@ -20,12 +20,12 @@
             {
                 prompt: "What is the tagline of the rhythm game \"Osu!\"?",
                 answer: "Rhythm is just a click away!",
-                matcher: /rh?ythm(is)?(just)?(a)?clickaway/
+                matcher: /rh?ythm(is)?(just|only)?(a)?clickaway/
             },
             {
                 prompt: "What is the name of the FIFA game released in 2017?",
 	            answer: "FIFA 18",
-                matcher: /fifa(20|twenty-?)?(18|eighteen)/,
+                matcher: /fifa(18|eighteen)/,
             },
             {
                 prompt: "How many buttons is the fighting game \"Dive Kick\" played with?",
